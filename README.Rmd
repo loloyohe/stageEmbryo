@@ -1,0 +1,34 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+This is a collection of mini functions to properly stage your embryos.
+The chick stages are based off of median estimates from the Hamburger Hamilton stages.
+The quails are median estimates that are approximately 90% of the time of the chicken embryo development.
+
+Stage your own embryo depending on the organism. Create your own .csv of the stages of your embryo, modeled off the examples. Use the stage.Embryo.Hour() for hour-day time scales. Use stage.Embryo.Minute() for faster developing organisms on the minute-hour time scale.
+
+
+```{r runStageEmbryo}
+#compile the functions in stageEmbryo.R
+#change /pwd/ to your present working directory
+#where all the stageEmbryo function and staging spreadsheets are
+#setwd()
+source('stageEmbryo.R', echo=TRUE)
+
+#when is my chick ready?
+#read in the .csv file of the chick stage
+chick<-read.csv("chickStages.csv", header =T)
+
+#format#"12/31/2012 23:59:59"
+stage.Embryo.Hour(fert = "09/14/2018 14:00:01", stage.guide = chick)
+
+```
+
+
