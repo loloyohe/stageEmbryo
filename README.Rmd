@@ -1,12 +1,3 @@
----
-title: "README"
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 
 This is a collection of mini functions to properly stage your embryos.
 The chick stages are based off of median estimates from the Hamburger Hamilton stages.
