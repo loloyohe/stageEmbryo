@@ -14,8 +14,6 @@ stage.Embryo.Hour<-function(fert, stage.guide){
   }
 }
 
-stage.Embryo("09/14/2018 14:00:00", chick)
-
 #if your embryo guide is staged in minutes
 stage.Embryo.Minute<-function(fert, stage.guide){
   start<-mdy_hms(fert)
